@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Visibilidad de seguridad -->
+    <!-- EJEMPLO -->
+    <record id="group_project_ejemploseguridad" model="res.groups">
+        <field name="name">Permitir pestaña Ejemplo</field>
+        <field name="category_id" ref="base.module_category_usability"/>
+    </record>
+    <!-- Recursos Humanos -->
+    <record id="group_project_rrhhpermisos" model="res.groups">
+        <field name="name">Permisos RRHH</field>
+        <field name="category_id" ref="base.module_category_usability"/>
+    </record>
+</odoo>

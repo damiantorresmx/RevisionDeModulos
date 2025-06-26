@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_project_task_form_execution" model="ir.ui.view">
+        <field name="name">view.project.task.form.execution</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Detalles de Asignacion y/o ejecución" id="page_execution">
+                    <group string="Ejecutante">
+                        <field name="execute_activity_ids" widget="many2many_tags"/>                    
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

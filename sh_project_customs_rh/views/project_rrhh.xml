@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="project_task_rrhh" model="ir.ui.view">
+        <field name="name">view.project.task.rrhh</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page groups="sh_project_customs.group_project_rrhhpermisos" name="permisos_rrhh" string="Permisos RRHH" id="permisos_rrhh">
+                    <group string="Permisos RRHH" id="acomodopermisos_rrhh">
+                        <group string="Toma de tiempo por Horas" id="tomadetiempoporhoras">
+                            <field name="permission_day" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' />
+                            <field name="timereturn_work" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' />
+                            <field name="hours_taken" />
+                            <field name="concept_permissiontime" />
+                        </group>
+                        <group string="Permiso con/sin goce" id="permisocongoce">
+                            <field name="permission_datebegin" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' />
+                            <field name="permission_dateend" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' />
+                            <field name="concept_permission" />
+                            <!-- <field name="p_plantel" /> -->
+                        </group>
+                        <group string="Toma de Vacaciones por adelantado" id="tomavacacionesadelantado">
+                            <field name="vac_date_emition" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' />
+                            <field name="vac_date_begin" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' />
+                            <field name="vac_date_end" options='{"datepicker": {"daysOfWeekDisabled": [0, 6]}}' />
+                            <field name="vac_days" />
+                            <field name="vac_taken" />
+                            <field name="vac_changed" />
+                            <field name="antiquity_date" />
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
